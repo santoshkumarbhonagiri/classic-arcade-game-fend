@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Classic Arcade Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam:700">
+</head>
+<body>
+    <main>
+	<section class="overlay game__start">
+		<div class="container">
+			<h2>Gems Collector</h2>
+			<p class="intro">Select your player</p>
+        <p> Good Luck! </p>
+			<div class="players">
+				<form id="group" class="radiogroup">
+					<div class="wrap__player">
+						<label>
+							<img class="players__images" src="images/char-boy.png" alt="Boy">
+							<input type="radio" class="players" name="players" id="char-boy" checked>
+						</label>
+					</div>
+					<div class="wrap__player">
+						<label>
+							<img class="players__images" src="images/char-cat-girl.png" alt="Cat Grirl">
+							<input type="radio" class="players" name="players" id="char-cat-girl">
+						</label>
+					</div>
+					<div class="wrap__player">
+						<label>
+							<img class="players__images" src="images/char-horn-girl.png" alt="Horn Girl">
+							<input type="radio" class="players" name="players" id="char-horn-girl">
+						</label>
+					</div>
+					<div class="wrap__player">
+						<label>
+							<img class="players__images" src="images/char-pink-girl.png" alt="Pink Girl">
+							<input type="radio" class="players" name="players" id="char-pink-girl">
+						</label>
+					</div>
+					<div class="wrap__player">
+						<label>
+							<img class="players__images" src="images/char-princess-girl.png" alt="Princess Girl">
+							<input type="radio" class="players" name="players" id="char-princess-girl">
+						</label>
+					</div>
+				</form>
+			</div>
+			<button class="btn btn__new__game" type="submit">Start Game</button>
+		</div>
+	</section>
+	<section class="overlay game__end hide">
+		<div class="container">
+			<h2>Gems Collector</h2>
+			<p class="message"><span>Congratulations</span> You won!</p>
+			<p class="players__message"><img src="images/char-princess-girl.png" alt="Player"></p>
+			<div class="scoring">
+				<p class="lives"><span>GAME END MESSAGE Remaining lives</span> 8  </p>
+				<p class="score"><span>GAME END MESSAGE Your bonus points</span> 0 </p>
+			</div>
+			<p class="new__game">Play again?</p>
+			<button class="btn btn__restart__game2" type="submit">New Game</button>
+		</div>
+	</section>
+
+	<section class="canvas__board hide">
+		<div class="container">
+			<div class="scoring">
+				<p class="lives"><span>CANVAS Remaining lives</span> 9 </p>
+				<p class="score"><span>CANVAS Your bonus points</span> 0 </p>
+			</div>
+			<div class="canvas__container">
+			</div>
+			<button class="btn btn__restart__game" type="submit">Restart Game</button>
+		</div>
+	</section>
+
+</main>
+
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
