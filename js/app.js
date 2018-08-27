@@ -1,4 +1,5 @@
 //Variables like buttons
+'use strict';
 const players = document.getElementsByName('players');
 const btnStart = document.querySelector('.btn__new__game');
 const btnRestart = document.querySelector('.btn__restart__game');
@@ -51,7 +52,7 @@ Game.prototype.start = function() {
     allBonusPositions(shuffle.array);
     createBonus(3); // total of 3 GemStones on canvas
     collisionCount = 0;
-    checkCollisions();
+    //checkCollisions();
     bonusCount = 0;
     lives[0].innerText = 'LIVES: ' + (3-collisionCount);
     lives[1].innerText = 'LIVES: ' + (3-collisionCount);
@@ -78,6 +79,7 @@ Game.prototype.over = function() {
     gameEnd.classList.remove('hide');
     canvas.classList.add('hide');
     buttonRestartGame2();
+    checkCollisions();
 };
 
 function restartActions() {
@@ -120,6 +122,7 @@ Enemy.prototype.update = function(dt) {
     if (this.xPos < -100 && this.speed < 0) {
        this.xPos =  game.width + 100; // enemy "runs" out of canvas and "returns" again on right side
     }
+    checkCollisions();
 };
 
 // Draw the enemy on the screen
