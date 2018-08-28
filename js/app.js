@@ -27,7 +27,6 @@ function randomize() {
 }
 
 const Game = function() {
-    "use strict()";
     this.width = 505;
     this.height = 606;
     this.colWidth = 101;
@@ -54,7 +53,7 @@ Game.prototype.start = function() {
     allBonusPositions(shuffle.array);
     createBonus(3); // total of 3 GemStones on canvas
     collisionCount = 0;
-    this.checkCollisions();
+    checkCollisions();
     bonusCount = 0;
     lives[0].innerText = 'LIVES: ' + (3-collisionCount);
     lives[1].innerText = 'LIVES: ' + (3-collisionCount);
@@ -124,7 +123,7 @@ Enemy.prototype.update = function(dt) {
     if (this.xPos < -100 && this.speed < 0) {
        this.xPos =  game.width + 100; // enemy "runs" out of canvas and "returns" again on right side
     }
-  this.checkCollisions();
+  checkCollisions();
 };
 
 // Draw the enemy on the screen
